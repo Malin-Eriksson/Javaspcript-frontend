@@ -39,7 +39,7 @@
 <!-- CONTACT FORM -->
     <section class="contact-form container">
             <h1>Come in Contact with Us</h1>
-        <form>
+        <form id="form" novalidate>
             <div>
                 <input id="name" type="text" placeholder="Your name">
                 <input id="email" type="email" placeholder="Your mail">
@@ -47,6 +47,8 @@
             <div>
                 <input id="comments" type="text" placeholder="Comments">
             </div>
+            <div id="error"></div>
+            <button type="post-comments">Post comments</button>
         </form>
 
     </section>
