@@ -1,0 +1,95 @@
+@import url(https://fonts.google.com/share?selection.family=Poppins:wght@500;700;800);
+.body {
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.top-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #23262A;
+}
+.top-menu .logo {
+  color: #23262A;
+  text-decoration: none;
+  font-size: 2.188rem;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+}
+.top-menu .logo:hover {
+  color: #FF7373;
+}
+.top-menu .navigation {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.top-menu .navigation ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.top-menu .navigation ul li {
+  list-style: none;
+}
+.top-menu .navigation ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #23262A;
+  font-size: 1rem;
+}
+.top-menu .navigation ul li a:hover {
+  color: #FF7373;
+}
+.top-menu .navigation ul li a::before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #FF7373;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.top-menu .navigation ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.top-menu .top-menu-icons .icon i {
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #BEBEBE;
+  transition: 0.5s ease-in-out;
+}
+.top-menu .top-menu-icons .icon i:hover {
+  color: #FF7373;
+  box-shadow: 0px 0px 10px #FF7373;
+}
+
+.map {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 3rem;
+}
+
+.contact-form h1 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.contact-form input {
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+}
