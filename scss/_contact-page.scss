@@ -1,141 +1,167 @@
-.body {
-    background-color: $color-white;
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: $font-poppins;
-    font-weight: $font-weight-medium;
-}
 
-.top-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: $color-white;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $color-black;
 
-    .logo {
-        color: $color-black;
-        text-decoration: none;
-        font-size: $font-size-35;
-        font-weight: $font-weight-extra-bold;
-        transition: 0.5s ease-in-out;
 
-        &:hover {
-            color: $color-theme;
-        }
-        }
 
-    .navigation {
-        display: flex;
-        align-items: center;
-        padding-top: 2rem;
 
-        ul {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 5rem;
 
-            li {
-                list-style: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .body {
+//     background-color: $color-white;
+//     min-height: 100vh;
+//     overflow: hidden;
+//     font-family: $font-poppins;
+//     font-weight: $font-weight-medium;
+// }
+
+// .top-menu {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100px;
+//     background-color: $color-white;
+//     padding: 40px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: $color-black;
+
+//     .logo {
+//         color: $color-black;
+//         text-decoration: none;
+//         font-size: $font-size-35;
+//         font-weight: $font-weight-extra-bold;
+//         transition: 0.5s ease-in-out;
+
+//         &:hover {
+//             color: $color-theme;
+//         }
+//         }
+
+//     .navigation {
+//         display: flex;
+//         align-items: center;
+//         padding-top: 2rem;
+
+//         ul {
+//             position: relative;
+//             display: flex;
+//             align-items: center;
+//             gap: 5rem;
+
+//             li {
+//                 list-style: none;
             
-                a {
-                    position: relative;
-                    text-decoration: none;
-                    color: $color-black;
-                    font-size: $font-size-16;
+//                 a {
+//                     position: relative;
+//                     text-decoration: none;
+//                     color: $color-black;
+//                     font-size: $font-size-16;
 
-                    &:hover {
-                        color: $color-theme;
-                    }
+//                     &:hover {
+//                         color: $color-theme;
+//                     }
 
-                    &::before {
-                        content: ' ';
-                        position: absolute;
-                        bottom: -2px;
-                        width: 100%;
-                        height: 2px;
-                        background: $color-theme;
-                        transform: scaleX(0);
-                        transition: transform 0.5s ease-in-out;
-                        transform-origin: right;
-                    }
+//                     &::before {
+//                         content: ' ';
+//                         position: absolute;
+//                         bottom: -2px;
+//                         width: 100%;
+//                         height: 2px;
+//                         background: $color-theme;
+//                         transform: scaleX(0);
+//                         transition: transform 0.5s ease-in-out;
+//                         transform-origin: right;
+//                     }
 
-                    &:hover::before {
-                        transform: scaleX(1);
-                        transform-origin: left;
-                    }
-                }
-            }
-        }
+//                     &:hover::before {
+//                         transform: scaleX(1);
+//                         transform-origin: left;
+//                     }
+//                 }
+//             }
+//         }
 
-    }
+//     }
 
-    .top-menu-icons {
+//     .top-menu-icons {
 
-        .icon {
+//         .icon {
          
-            i {
-                margin: 0.5rem;
-                padding: 0.8rem;
-                border-radius: 50%;
-                box-shadow: 0px 0px 5px $color-grey;
-                transition: 0.5s ease-in-out;
+//             i {
+//                 margin: 0.5rem;
+//                 padding: 0.8rem;
+//                 border-radius: 50%;
+//                 box-shadow: 0px 0px 5px $color-grey;
+//                 transition: 0.5s ease-in-out;
                 
-                &:hover {
-                    color: $color-theme;
-                    box-shadow: 0px 0px 10px $color-theme;
-                }
-            }
-        }
-    }
+//                 &:hover {
+//                     color: $color-theme;
+//                     box-shadow: 0px 0px 10px $color-theme;
+//                 }
+//             }
+//         }
+//     }
     
-}
-.breadcrumb {
+// }
+// .breadcrumb {
     
-    margin-top: 500px;
-    color: $color-black;
-}
+//     margin-top: 500px;
+//     color: $color-black;
+// }
 
 
-.contact-form {
-    display: grid;
+// .contact-form {
+//     display: grid;
 
-    h1 {
-        font-size: $font-size-18;
-        font-weight: $font-weight-bold;
-    }
+//     h1 {
+//         font-size: $font-size-18;
+//         font-weight: $font-weight-bold;
+//     }
 
-    input {
-        margin: 1rem 1rem 1rem 0rem;
+//     input {
+//         margin: 1rem 1rem 1rem 0rem;
 
         
-    }
+//     }
 
-    #error {
-        font-size: $font-size-11;
-        color: $color-theme;
-    }
+//     #error {
+//         font-size: $font-size-11;
+//         color: $color-theme;
+//     }
 
-    button {
-        background-color: $color-theme;
-        color: $color-white;
-        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-        border: none;
-        font-weight: $font-weight-bold;
-        margin-top: 5rem;
-        transition: 0.5s ease-in-out;
+//     button {
+//         background-color: $color-theme;
+//         color: $color-white;
+//         padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+//         border: none;
+//         font-weight: $font-weight-bold;
+//         margin-top: 5rem;
+//         transition: 0.5s ease-in-out;
 
-        &:hover {
-            background-color: $color-light-grey;
-            color: $color-theme;
-        }
-    }
+//         &:hover {
+//             background-color: $color-light-grey;
+//             color: $color-theme;
+//         }
+//     }
     
-}
+// }

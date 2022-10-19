@@ -1,0 +1,4 @@
+.gradient-grey {
+    background: $color-gradient-dark;
+    background: linear-gradient(90deg, $color-gradient-dark 0%, $color-gradient-light 100%);
+}
