@@ -28,7 +28,6 @@
 
         &:hover {
             color: $color-theme;
-
         }
         }
 
@@ -98,17 +97,15 @@
     }
     
 }
-
-.map {
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 3rem;
+.breadcrumb {
+    
+    margin-top: 500px;
+    color: $color-black;
 }
 
 
-
-
 .contact-form {
+    display: grid;
 
     h1 {
         font-size: $font-size-18;
