@@ -2,3 +2,136 @@
     background: $color-gradient-dark;
     background: linear-gradient(90deg, $color-gradient-dark 0%, $color-gradient-light 100%);
 }
+
+// SHOWCASE
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img-left {
+        margin-left: -120px;
+    }
+
+    .img-right {
+        margin-right: -120px;
+    }
+
+    .showcase-body {
+        text-align: center;
+        
+
+        h1 {
+            font-size: $font-size-65;
+            font-weight: $font-weight-extra-bold;
+        }
+
+        p {
+            margin-top: 50px;
+            margin-bottom: 35px;
+            font-size: $font-size-20;
+        }
+    }
+}
+
+header {
+    margin-bottom: 135px;
+}
+
+
+// FEATURED PRODUCTS
+.featured-prodocts {
+    h1 {
+        font-size: $font-size-20;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        margin-bottom: 30px; 
+    }
+
+    .container {
+        max-width: 1110px;
+    }
+}
+
+// BANNERS
+.banners {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    margin-top: 65px;
+
+    h1 {
+        font-size: $font-size-45;
+        font-weight: $font-weight-bold;
+        margin-bottom: 35px;
+    }
+
+    .banner-1 {
+        position: relative;
+        margin-right: 15px;
+
+        .btn-theme {
+            background-color: $color-black;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-white;
+                color: $color-black;
+
+                .btn-theme-left {
+                    border-left: 2px solid $color-black;
+                    border-top: 2px solid $color-black;
+                }
+                .btn-theme-right {
+                    border-right: 2px solid $color-black;
+                    border-bottom: 2px solid $color-black;
+                }
+            }
+        }
+        .title-1 {
+            position: absolute;
+            top: 100px;
+            left: 450px;
+        }
+    }
+
+    .banner-2 {
+        position: relative;
+        margin-left: 15px;
+
+        .btn-theme {
+            background-color: $color-white;
+            color: $color-black;
+
+            &:hover {
+                background-color: $color-black;
+                color: $color-white;
+
+                .btn-theme-left {
+                    border-left: 2px solid $color-white;
+                    border-top: 2px solid $color-white;
+                }
+                .btn-theme-right {
+                    border-right: 2px solid $color-white;
+                    border-bottom: 2px solid $color-white;
+                }
+            }
+
+            .btn-theme-left {
+                border-left: 2px solid $color-black;
+                border-top: 2px solid $color-black;
+            }
+            .btn-theme-right {
+                border-right: 2px solid $color-black;
+                border-bottom: 2px solid $color-black;
+            }
+        }
+        .title-2 {
+            position: absolute;
+            top: 100px;
+            left: 65px;
+        }
+    }
+
+}

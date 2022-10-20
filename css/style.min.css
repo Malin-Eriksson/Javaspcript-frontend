@@ -1,9 +1,13 @@
-@import url(https://fonts.google.com/share?selection.family=Poppins:wght@500;700;800);
+@import url(https://fonts.google.com/share?selection.family=Poppins:wght@500;600;700;800);
 body {
   font-family: "Poppins", sans-serif, sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
   color: #222529;
+}
+
+.bg-theme {
+  background-color: #FF7373;
 }
 
 a {
@@ -15,8 +19,103 @@ a:hover {
   color: #FF7373;
 }
 
-.bg-theme {
+.btn-theme {
+  position: relative;
+  text-align: center;
   background-color: #FF7373;
+  color: #FFFFFF;
+  padding: 25px 50px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-theme .btn-theme-left,
+.btn-theme .btn-theme-right {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+.btn-theme .btn-theme-left {
+  top: 10px;
+  left: 10px;
+  border-left: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
+}
+.btn-theme .btn-theme-right {
+  bottom: 10px;
+  right: 10px;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+.btn-theme:hover {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+
+.card {
+  border: none;
+}
+.card img,
+.card .img {
+  height: 210px;
+  width: 255px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.card .card-body {
+  text-align: center;
+}
+.card .card-body .card-category {
+  font-size: 13px;
+  font-weight: 500;
+  color: #616365;
+}
+.card .card-body .card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.card .card-body .card-rating {
+  color: #FF7373;
+}
+.card .card-body .card-price {
+  font-size: 18px;
+  font-weight: 600;
+}
+.card .btn-theme {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.card .card-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card .card-menu a {
+  background-color: #FFFFFF;
+  color: #222529;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(34, 37, 41, 0.06);
+  position: relative;
+}
+.card .card-menu a:hover {
+  color: #FFFFFF;
+  background-color: #222529;
+}
+.card:hover .btn-theme {
+  display: flex;
+}
+.card:hover .card-menu {
+  display: block;
 }
 
 @media (min-width: 1600px) {
@@ -35,7 +134,7 @@ a:hover {
   color: #FF7373;
 }
 .__navbar .logo {
-  font-size: 2.188rem;
+  font-size: 35px;
   font-weight: 700;
 }
 .__navbar .nav-links {
@@ -68,10 +167,119 @@ a:hover {
   position: relative;
 }
 .__navbar .nav-icon-links a:hover {
-  color: #FF7373;
+  background-color: #222529;
+  color: #FFFFFF;
 }
 
 .gradient-grey {
   background: #E6E6E6;
   background: linear-gradient(90deg, #E6E6E6 0%, #F5F5F5 100%);
+}
+
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showcase .img-left {
+  margin-left: -120px;
+}
+.showcase .img-right {
+  margin-right: -120px;
+}
+.showcase .showcase-body {
+  text-align: center;
+}
+.showcase .showcase-body h1 {
+  font-size: 65px;
+  font-weight: 800;
+}
+.showcase .showcase-body p {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 135px;
+}
+
+.featured-prodocts h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.featured-prodocts .container {
+  max-width: 1110px;
+}
+
+.banners {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 65px;
+}
+.banners h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.banners .banner-1 {
+  position: relative;
+  margin-right: 15px;
+}
+.banners .banner-1 .btn-theme {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+.banners .banner-1 .btn-theme:hover {
+  background-color: #FFFFFF;
+  color: #222529;
+}
+.banners .banner-1 .btn-theme:hover .btn-theme-left {
+  border-left: 2px solid #222529;
+  border-top: 2px solid #222529;
+}
+.banners .banner-1 .btn-theme:hover .btn-theme-right {
+  border-right: 2px solid #222529;
+  border-bottom: 2px solid #222529;
+}
+.banners .banner-1 .title-1 {
+  position: absolute;
+  top: 100px;
+  left: 450px;
+}
+.banners .banner-2 {
+  position: relative;
+  margin-left: 15px;
+}
+.banners .banner-2 .btn-theme {
+  background-color: #FFFFFF;
+  color: #222529;
+}
+.banners .banner-2 .btn-theme:hover {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+.banners .banner-2 .btn-theme:hover .btn-theme-left {
+  border-left: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
+}
+.banners .banner-2 .btn-theme:hover .btn-theme-right {
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+.banners .banner-2 .btn-theme .btn-theme-left {
+  border-left: 2px solid #222529;
+  border-top: 2px solid #222529;
+}
+.banners .banner-2 .btn-theme .btn-theme-right {
+  border-right: 2px solid #222529;
+  border-bottom: 2px solid #222529;
+}
+.banners .banner-2 .title-2 {
+  position: absolute;
+  top: 100px;
+  left: 65px;
 }

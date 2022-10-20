@@ -46,7 +46,8 @@
             position: relative;
 
             &:hover {
-                color: $color-theme;
+                background-color: $color-black;
+                color: $color-white;
             }
 
         }

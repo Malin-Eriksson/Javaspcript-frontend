@@ -1,3 +1,4 @@
+// BODY GENERAL
 body {
     font-family: $font-poppins, sans-serif;
     font-weight: $font-weight-medium;
@@ -5,6 +6,13 @@ body {
     color: $color-black;
 }
 
+// THEME BACKGROUND
+.bg-theme {
+    background-color: $color-theme;
+}
+
+
+// LINKS GENERAL
 a {
     color: $color-black;
     text-decoration: none;
@@ -15,9 +23,121 @@ a {
     }
 }
 
-.bg-theme {
+
+// BUTTON WITH THEME COLOR
+.btn-theme {
+    position: relative;
+    text-align: center;
     background-color: $color-theme;
+    color: $color-white;
+    padding: 25px 50px;
+    transition: all 0.3s ease-in-out;
+
+    .btn-theme-left,
+    .btn-theme-right {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+    }
+    .btn-theme-left {
+        top: 10px;
+        left: 10px;
+        border-left: 2px solid $color-white;
+        border-top: 2px solid $color-white;
+    }
+    .btn-theme-right {
+        bottom: 10px;
+        right: 10px;
+        border-right: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+    }
+
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+    }
 }
+
+
+// PRODUCT CARD
+.card {
+    border: none;
+
+    img,
+    .img {
+        height: 210px;
+        width: 255px;
+        background-color: $color-gradient-light;
+        position: relative;
+    }
+    .card-body {
+        text-align: center;
+        
+        .card-category {
+            font-size: $font-size-13;
+            font-weight: $font-weight-medium;
+            color: $color-dark-grey;
+        }
+        .card-title {
+            font-size: $font-size-16;
+            font-weight: $font-weight-semibold;
+        }
+        .card-rating {
+            color: $color-theme;
+        }
+        .card-price {
+            font-size: $font-size-18;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .btn-theme {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+    
+    .card-menu {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        a {
+            background-color: $color-white;
+            color: $color-black;
+            width: 36px;
+            height: 36px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px 5px $color-shadow;
+            position: relative;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-black;
+            }
+        }
+    }
+
+    &:hover .btn-theme {
+        display: flex;
+    }
+    &:hover .card-menu {
+        display: block;
+    }
+
+
+}
+
+
 
 @media (min-width: 1600px) {
     .container {
