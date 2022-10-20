@@ -72,6 +72,7 @@ a {
     }
     .card-body {
         text-align: center;
+        width: 255px;
         
         .card-category {
             font-size: $font-size-13;
@@ -88,6 +89,10 @@ a {
         .card-price {
             font-size: $font-size-18;
             font-weight: $font-weight-semibold;
+        }
+
+        p {
+           margin: 5px 0 8px 0; 
         }
     }
 

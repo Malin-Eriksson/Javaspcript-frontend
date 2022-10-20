@@ -135,3 +135,134 @@ header {
     }
 
 }
+
+// PRODUCT DISPLAY 1
+.product-display-1,
+.product-display-2 {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+
+    h1 {
+        color: $color-white;
+        font-size: $font-size-45;
+        font-weight: $font-weight-bold;
+    }
+
+    .flash-box {
+        background-color: $color-light-grey;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+
+        .btn-theme {
+            background-color: $color-white;
+            color: $color-black;
+
+            .btn-theme-left {
+                border-left: 2px solid $color-black;
+                border-top: 2px solid $color-black;
+            }
+            .btn-theme-right {
+                border-right: 2px solid $color-black;
+                border-bottom: 2px solid $color-black;
+            }
+
+            &:hover {
+                background-color: $color-black;
+                color: $color-white;
+
+                .btn-theme-left {
+                    border-left: 2px solid $color-white;
+                    border-top: 2px solid $color-white;
+                }
+                .btn-theme-right {
+                    border-right: 2px solid $color-white;
+                    border-bottom: 2px solid $color-white;
+                }
+            }
+        }
+    }
+
+    .display-boxes {
+        display: inline-flex;
+
+        span {
+            margin-right: 30px;
+        }
+        
+        .card-body {
+            text-align: left;
+        }
+    }
+}
+
+.product-display-2 {
+    justify-content: end;
+}
+
+// SHOP INFO
+
+hr {
+    border: 2px solid $color-dark-grey;
+
+}
+.shop-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+
+    .shop-info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+    h1 {
+        font-size: $font-size-20;
+        font-weight: $font-weight-bold;
+    }
+    p {
+        text-align: center;
+    }
+
+    a {
+        background-color: $color-white;
+        color: $color-black;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px 5px $color-shadow;
+    }
+
+    }
+
+}
+
+// FOOTER
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-gradient-light;
+    padding: 30px 0;
+    margin-top: 30px;
+
+
+    i {
+        margin: 10px;
+        font-size: $font-size-20;
+    }
+}
+
+
+
+
