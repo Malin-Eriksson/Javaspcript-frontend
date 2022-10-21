@@ -175,6 +175,70 @@ a:hover {
   color: #FFFFFF;
 }
 
+.breadcrumb {
+  margin: 40px 0;
+}
+.breadcrumb span {
+  margin-left: 10px;
+  font-weight: 500;
+  color: #FF7373;
+}
+.breadcrumb .container {
+  max-width: 1110px;
+}
+
+.map {
+  margin-bottom: 75px;
+}
+.map .google-map {
+  border: 0;
+  width: 100%;
+  height: 380px;
+}
+
+.contact-form .container {
+  max-width: 1110px;
+}
+.contact-form .container h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.contact-form form input {
+  padding: 18px 20px;
+  border: 1px solid #BBBBBB;
+  width: 100%;
+}
+.contact-form form textarea {
+  padding: 18px 20px;
+  border: 1px solid #BBBBBB;
+  resize: none;
+  height: 140px;
+  width: 100%;
+}
+.contact-form form .textarea {
+  grid-column: 1/-1;
+}
+.contact-form form button {
+  border: none;
+  font-weight: 600;
+  padding: 15px 40px;
+}
+.contact-form form .error {
+  color: #FF7373;
+  border: 1px solid #FF7373;
+}
+.contact-form form .errorMessage {
+  margin-top: 5px;
+  color: #FF7373;
+  font-size: 0.8em;
+}
+
 .gradient-grey {
   background: #E6E6E6;
   background: linear-gradient(90deg, #E6E6E6 0%, #F5F5F5 100%);

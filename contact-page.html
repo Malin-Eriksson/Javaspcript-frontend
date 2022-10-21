@@ -19,10 +19,10 @@
                 <a href="#">Fixxo.</a>
             </div>
             <div class="nav-links">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="#">Categories</a>
                 <a href="#">Products</a>
-                <a class="__active" href="#">Contacts</a>
+                <a class="__active" href="contact-page.html">Contacts</a>
             </div>
             <div class="nav-icon-links">
                 <a href="#" class="white-circle"><i class="fa-regular fa-magnifying-glass"></i></a>
@@ -32,39 +32,68 @@
             </div>
         </nav>
     </section>
-
-
-
-    <!-- <section class="top-menu">
-        <a href="#" class="logo"><strong>F</strong>ixxo.</a>
-        <div class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="top-menu-icons">
-            <span class="icon">
-                <i class="fa-regular fa-magnifying-glass"></i>
-                <i class="fa-regular fa-code-compare"></i>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-bag-shopping"></i>
-            </span>
-        </div>
-    </section> -->
 <!-- BREADCRUMB -->
-    <!-- <section>
-        <div class="breadcrumb">
-            <a href=""><i class="fa-solid fa-house"></i></a>
-            <a href="./contact-page.html">Contact</a>
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fa-sharp fa-solid fa-house"></i></a>
+            <span>Contacts</span>
         </div>
-    </section> -->
+    </section>
 <!-- MAP -->
-    <!-- <section>
-        <img class="map" src="./images/map2.jpg" alt="map">
-    </section> -->
+    <section class="map">
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4068.9705182507464!2d18.022792207876062!3d59.341547262172156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d86c5590a35%3A0xac5dd727a529fe56!2sEC%20Utbildning!5e0!3m2!1ssv!2sse!4v1666348771676!5m2!1ssv!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+<!-- CONTACT FORM -->
+    <section class="contact-form">
+        <div class="container">
+            <h2>Come in Contact with Us</h2>
+            <form onsubmit="submitForm(event)" novalidate>
+                <div>
+                    <input id="name" onkeyup="validate(event)" type="text" placeholder="Your Name">
+                    <div id="nameErrorMessage" class="errorMessage"></div>
+                </div>
+                <div>
+                    <input id="email" onkeyup="validate(event)" type="email" placeholder="Your Email">
+                    <div id="emailErrorMessage" class="errorMessage"></div>
+                </div>
+                <div class="textarea">
+                    <textarea id="comment" onkeyup="validate(event)" placeholder="Comments"></textarea>
+                    <div id="commentErrorMessage" class="errorMessage"></div>
+                </div> 
+                <div>
+                    <button type="submit" class="btn-theme">Post Comments</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+<!-- FOOTER -->
+    <section>
+        <div class="footer">
+            <div>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div>
+                <p>© 2022 Fixxo. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 <!-- CONTACT FORM -->
 <!-- <div class="container">
     <form class="contact-form" onsubmit="onSubmit(event)" novalidate>
