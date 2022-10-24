@@ -1,38 +1,30 @@
-.__navbar {
+.mainmenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
 
-    .__active {
-        color: $color-theme;
-    }
-
     .logo {
         font-size: $font-size-35;
         font-weight: $font-weight-bold;
     }
-
-    .nav-links {
+    .menu-links {
         font-weight: $font-weight-medium;
 
-        a {
+        .menu-link {
             font-weight: $font-weight-medium;
             margin-left: 15px;
             margin-right: 15px;
-
-            &:active {
-                color: $color-theme;
-            }
         }
+        
     }
-    .nav-icon-links {
+    .menu-icons {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
-        a {
+        
+        .menu-icon {
             background-color: $color-white;
             color: $color-black;
             width: 36px;
@@ -49,12 +41,6 @@
                 background-color: $color-black;
                 color: $color-white;
             }
-
         }
-
-
     }
 }
-
-
-
