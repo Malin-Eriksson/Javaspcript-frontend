@@ -1,11 +1,12 @@
 import React from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
+import FooterSection from '../sections/FooterSection'
 
 function ContactView() {
   return (
     <>
-      <MainMenuSection />
-      <h1>Contact</h1>
+      <MainMenuSection/>
+      <FooterSection/>
     </>
 
 

@@ -2,14 +2,14 @@ import React from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 
-function HomeView() {
+
+const CompareView = () => {
   return (
     <>
       <MainMenuSection/>
       <FooterSection/>
     </>
-    
   )
 }
 
-export default HomeView
+export default CompareView
