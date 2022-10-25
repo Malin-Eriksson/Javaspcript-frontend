@@ -127,6 +127,11 @@ a:hover {
   display: block;
 }
 
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+}
 .mainmenu {
   display: flex;
   justify-content: space-between;
