@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
+import ShowcaseSection from '../sections/ShowcaseSection'
 
 function HomeView() {
 
-  const [products, setProducts] = useState([
+  const [products] = useState([
     { id: 1, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
     { id: 2, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
     { id: 3, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
@@ -20,6 +21,7 @@ function HomeView() {
   return (
     <>
       <MainMenuSection />
+      <ShowcaseSection />
       <ProductGridSection title="Featured Products" products={products}/>
       <FooterSection />
     </>
