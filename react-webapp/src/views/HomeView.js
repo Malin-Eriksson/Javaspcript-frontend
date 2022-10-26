@@ -3,6 +3,7 @@ import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import ShowcaseSection from '../sections/ShowcaseSection'
+import BannerSection from '../sections/BannerSection'
 
 function HomeView() {
 
@@ -23,6 +24,7 @@ function HomeView() {
       <MainMenuSection />
       <ShowcaseSection />
       <ProductGridSection title="Featured Products" products={products}/>
+      <BannerSection />
       <FooterSection />
     </>
     

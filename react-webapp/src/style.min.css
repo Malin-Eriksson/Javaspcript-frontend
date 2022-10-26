@@ -229,6 +229,76 @@ header {
     max-width: 1110px;
   }
 }
+.banners {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 65px;
+}
+.banners h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.banners .banner-1 {
+  position: relative;
+  margin-right: 15px;
+}
+.banners .banner-1 .btn-theme {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+.banners .banner-1 .btn-theme:hover {
+  background-color: #FFFFFF;
+  color: #222529;
+}
+.banners .banner-1 .btn-theme:hover .btn-theme-left {
+  border-left: 2px solid #222529;
+  border-top: 2px solid #222529;
+}
+.banners .banner-1 .btn-theme:hover .btn-theme-right {
+  border-right: 2px solid #222529;
+  border-bottom: 2px solid #222529;
+}
+.banners .banner-1 .title-1 {
+  position: absolute;
+  top: 100px;
+  left: 450px;
+}
+.banners .banner-2 {
+  position: relative;
+  margin-left: 15px;
+}
+.banners .banner-2 .btn-theme {
+  background-color: #FFFFFF;
+  color: #222529;
+}
+.banners .banner-2 .btn-theme:hover {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+.banners .banner-2 .btn-theme:hover .btn-theme-left {
+  border-left: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
+}
+.banners .banner-2 .btn-theme:hover .btn-theme-right {
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+.banners .banner-2 .btn-theme .btn-theme-left {
+  border-left: 2px solid #222529;
+  border-top: 2px solid #222529;
+}
+.banners .banner-2 .btn-theme .btn-theme-right {
+  border-right: 2px solid #222529;
+  border-bottom: 2px solid #222529;
+}
+.banners .banner-2 .title-2 {
+  position: absolute;
+  top: 100px;
+  left: 65px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
