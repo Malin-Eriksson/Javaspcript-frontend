@@ -5,8 +5,8 @@ import FooterSection from '../sections/FooterSection'
 const ProductsView = () => {
   return (
     <>
-      <MainMenuSection/>
-      <FooterSection/>
+      <MainMenuSection />
+      <FooterSection />
     </>
   )
 }

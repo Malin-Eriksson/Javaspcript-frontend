@@ -6,8 +6,8 @@ import FooterSection from '../sections/FooterSection'
 const CompareView = () => {
   return (
     <>
-      <MainMenuSection/>
-      <FooterSection/>
+      <MainMenuSection />
+      <FooterSection />
     </>
   )
 }

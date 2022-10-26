@@ -5,8 +5,8 @@ import FooterSection from '../sections/FooterSection'
 const SearchView = () => {
   return (
     <>
-      <MainMenuSection/>
-      <FooterSection/>
+      <MainMenuSection />
+      <FooterSection />
     </>
   )
 }

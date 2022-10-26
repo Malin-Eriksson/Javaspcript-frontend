@@ -5,8 +5,8 @@ import FooterSection from '../sections/FooterSection'
 function ContactView() {
   return (
     <>
-      <MainMenuSection/>
-      <FooterSection/>
+      <MainMenuSection />
+      <FooterSection />
     </>
 
 

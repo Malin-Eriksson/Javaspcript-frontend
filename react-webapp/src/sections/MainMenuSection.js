@@ -9,7 +9,7 @@ const MainMenuSection = () => {
         <div className="menu-links">
             <NavLink className="menu-link" to="/" end>Home</NavLink>
             <NavLink className="menu-link" to="/categories" end>Categories</NavLink>
-            <NavLink className="menu-link" to="/products" end>Products</NavLink>
+            <NavLink className="menu-link" to="/products">Products</NavLink>
             <NavLink className="menu-link" to="/contact" end>Contact</NavLink>
         </div>
         <div className="menu-icons">

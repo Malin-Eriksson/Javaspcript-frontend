@@ -55,78 +55,6 @@ a:hover {
   color: #FFFFFF;
 }
 
-.card {
-  border: none;
-}
-.card img,
-.card .img {
-  height: 210px;
-  width: 255px;
-  background-color: #F5F5F5;
-  position: relative;
-}
-.card .card-body {
-  text-align: center;
-  width: 255px;
-}
-.card .card-body .card-category {
-  font-size: 13px;
-  font-weight: 500;
-  color: #616365;
-}
-.card .card-body .card-title {
-  font-size: 16px;
-  font-weight: 600;
-}
-.card .card-body .card-rating {
-  color: #FF7373;
-}
-.card .card-body .card-price {
-  font-size: 18px;
-  font-weight: 600;
-}
-.card .card-body p {
-  margin: 5px 0 8px 0;
-}
-.card .btn-theme {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
-.card .card-menu {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.card .card-menu a {
-  background-color: #FFFFFF;
-  color: #222529;
-  width: 36px;
-  height: 36px;
-  margin-bottom: 15px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 10px 5px rgba(34, 37, 41, 0.06);
-  position: relative;
-}
-.card .card-menu a:hover {
-  color: #FFFFFF;
-  background-color: #222529;
-}
-.card:hover .btn-theme {
-  display: flex;
-}
-.card:hover .card-menu {
-  display: block;
-}
-
 @media (min-width: 1600px) {
   .container {
     max-width: 1600px;
@@ -182,6 +110,95 @@ a:hover {
   color: #FFFFFF;
 }
 
+.product-grid .container h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.product-grid .card {
+  border: none;
+}
+.product-grid .card img,
+.product-grid .card .card-img {
+  height: 210px;
+  width: 255px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.product-grid .card img .card-menu,
+.product-grid .card .card-img .card-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.product-grid .card img .card-menu .menu-link,
+.product-grid .card .card-img .card-menu .menu-link {
+  background-color: #FFFFFF;
+  color: #222529;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(34, 37, 41, 0.06);
+  position: relative;
+  border: none;
+  outline: none;
+}
+.product-grid .card img .card-menu .menu-link:hover,
+.product-grid .card .card-img .card-menu .menu-link:hover {
+  color: #FFFFFF;
+  background-color: #222529;
+}
+.product-grid .card img .btn-theme,
+.product-grid .card .card-img .btn-theme {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.product-grid .card .card-body {
+  text-align: center;
+  width: 255px;
+}
+.product-grid .card .card-body .card-category {
+  font-size: 13px;
+  font-weight: 500;
+  color: #616365;
+}
+.product-grid .card .card-body .card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.product-grid .card .card-body .card-rating {
+  color: #FF7373;
+}
+.product-grid .card .card-body .card-price {
+  font-size: 18px;
+  font-weight: 600;
+}
+.product-grid .card .card-body p {
+  margin: 5px 0 8px 0;
+}
+.product-grid .card:hover .card-menu {
+  display: block;
+}
+.product-grid .card:hover .btn-theme {
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .product-grid .container {
+    max-width: 1110px;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
