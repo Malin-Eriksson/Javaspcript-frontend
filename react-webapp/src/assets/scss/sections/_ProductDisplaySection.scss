@@ -1,5 +1,3 @@
-
-
 .product-display-1,
 .product-display-2 {
     display: flex;
@@ -12,7 +10,7 @@
         font-weight: $font-weight-bold;
     }
 
-    .product-info {
+    .card-body {
         text-align: left !important;
     }
 

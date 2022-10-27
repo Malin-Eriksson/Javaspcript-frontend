@@ -316,8 +316,8 @@ header {
   font-size: 45px;
   font-weight: 700;
 }
-.product-display-1 .product-info,
-.product-display-2 .product-info {
+.product-display-1 .card-body,
+.product-display-2 .card-body {
   text-align: left !important;
 }
 .product-display-1 .flash-box,
@@ -363,6 +363,40 @@ header {
 
 .product-display-2 {
   justify-content: end;
+}
+
+hr {
+  border: 2px solid #616365;
+}
+
+.shop-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+.shop-info .shop-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop-info .shop-info-box h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.shop-info .shop-info-box p {
+  text-align: center;
+}
+.shop-info .shop-info-box a {
+  background-color: #FFFFFF;
+  color: #222529;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(34, 37, 41, 0.06);
 }
 
 footer {
