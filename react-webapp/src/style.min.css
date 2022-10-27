@@ -151,6 +151,7 @@ header {
   width: 255px;
 }
 .product-grid .card {
+  display: inline-flex;
   border: none;
 }
 .product-grid .card img,
@@ -197,6 +198,10 @@ header {
   justify-content: center;
   align-items: center;
   height: 50px;
+}
+.product-grid .card .card-body {
+  text-align: center;
+  width: 255px;
 }
 .product-grid .card .card-body .card-category {
   font-size: 13px;
@@ -355,25 +360,11 @@ header {
   border-right: 2px solid #FFFFFF;
   border-bottom: 2px solid #FFFFFF;
 }
-.product-display-1 .display-boxes,
-.product-display-2 .display-boxes {
-  display: inline-flex;
-}
-.product-display-1 .product-display-2,
-.product-display-2 .product-display-2 {
+
+.product-display-2 {
   justify-content: end;
 }
-.product-display-1 .product-grid,
-.product-display-2 .product-grid {
-  justify-content: left !important;
-  border: 1px solid black;
-}
 
-@media (min-width: 2000px) {
-  .product-grid .container {
-    max-width: 2000px !important;
-  }
-}
 footer {
   display: flex;
   flex-direction: column;

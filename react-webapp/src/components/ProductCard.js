@@ -16,8 +16,8 @@ const ProductCard = ({product}) => {
   
   
   return (
-  <div className="col card">  
-      <div className="card-body">
+  <div className="col">
+    <div className='card'>  
         <div className="card-img">
           <img src={product.img} alt={product.name}/>
           <div className="card-menu">
@@ -31,7 +31,7 @@ const ProductCard = ({product}) => {
             <span className="btn-theme-right"></span>
           </NavLink>
         </div>
-        <div className='product-info'>
+        <div className="card-body">
           <p className="card-category">{product.category}</p>
           <h5 className="card-title">{product.name}</h5>
           <div className="card-rating">
@@ -44,7 +44,7 @@ const ProductCard = ({product}) => {
           <p className="card-price">{product.price}</p>
         </div>
       </div>
-  </div>  
+      </div> 
   )
 }
 

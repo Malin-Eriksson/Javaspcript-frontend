@@ -1,7 +1,9 @@
+
+
 .product-display-1,
 .product-display-2 {
     display: flex;
-    width: 100%;
+    width: 100%;    
     margin-bottom: 60px;
 
     h1 {
@@ -13,8 +15,6 @@
     .product-info {
         text-align: left !important;
     }
-
-
 
     .flash-box {
         background-color: $color-light-grey;
@@ -53,28 +53,11 @@
             }
         }
     }
+}
 
-    .display-boxes {
-        display: inline-flex;
-    }
-
-    .product-display-2 {
-        justify-content: end;
-    }
-
-    .product-grid {
-        justify-content: left !important;
-        border: 1px solid black;
-    }
-
+.product-display-2 {
+    justify-content: end;
 }
 
 
 
-@media (min-width: 2000px) {
-    .product-grid {
-        .container {
-            max-width: 2000px !important;
-        }
-    }
-}
