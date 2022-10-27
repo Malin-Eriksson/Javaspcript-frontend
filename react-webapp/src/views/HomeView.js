@@ -4,11 +4,13 @@ import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import ShowcaseSection from '../sections/ShowcaseSection'
 import BannerSection from '../sections/BannerSection'
+import ProductDisplaySection1 from '../sections/ProductDisplaySection1'
+import ProductDisplaySection2 from '../sections/ProductDisplaySection2'
 
 function HomeView() {
 
   const [products] = useState([
-    { id: 1, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 1, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
     { id: 2, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
     { id: 3, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
     { id: 4, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
@@ -18,6 +20,20 @@ function HomeView() {
     { id: 8, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }
   ])
 
+  const [productDisplay1] = useState([
+    { id: 1, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 2, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 3, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 4, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }
+  ])
+
+  // const [productDisplay2] = useState([
+  //   { id: 1, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  //   { id: 2, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  //   { id: 3, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  //   { id: 4, name: "Striped knit sweater", category: "Women", price: "$35", rating: 5, img: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }
+  // ])
+
 
   return (
     <>
@@ -25,6 +41,8 @@ function HomeView() {
       <ShowcaseSection />
       <ProductGridSection title="Featured Products" products={products}/>
       <BannerSection />
+      <ProductDisplaySection1 title="2 FOR USD $29" products={productDisplay1} />
+      {/* <ProductDisplaySection2 title="2 FOR USD $49" products={productDisplay2} /> */}
       <FooterSection />
     </>
     
