@@ -5,7 +5,7 @@
 @import "./cores/variables";
 @import "./cores/base";
 
-// sections
+// sections home
 @import "./sections/MainMenuSection";
 @import "./sections/ShowcaseSection";
 @import "./sections/ProductGridSection";
@@ -13,3 +13,8 @@
 @import "./sections/ProductDisplaySection";
 @import "./sections/ShopInfoSection";
 @import "./sections/FooterSection";
+
+// sections contact
+@import "./sections/BreadcrumbSection";
+@import "./sections/MapSection";
+@import "./sections/ContactFormSection";
