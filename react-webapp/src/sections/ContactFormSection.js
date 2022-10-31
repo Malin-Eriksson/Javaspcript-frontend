@@ -10,6 +10,7 @@ const ContactForm = () => {
   const [comments, setComments] = useState('')
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [failedSubmit, setFailedSubmit] = useState(false)
 
   const handleChange = (e) => {
     const {id, value} = e.target
@@ -31,17 +32,57 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setErrors(validate(e, {name, email, comments}))
+    setFailedSubmit(false)
+    setSubmitted(false)
   
     if (errors.name === null && errors.email === null && errors.comments === null) {
-      setSubmitted(true)
+
+      let json = JSON.stringify({ name, email, comments})
+
       setName('')
       setEmail('')
       setComments('')
       setErrors({})
+
+      fetch ('https://win22-webapi.azurewebsites.net/api/contactform', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: json     
+      })
+      .then(res => {
+
+        if (res.status === 200) {
+          setSubmitted(true)
+          setFailedSubmit(false)
+        }
+        else {
+          setSubmitted(false)
+          setFailedSubmit(true)
+        }
+    })
+        
     } else {
       setSubmitted(false)
     }
+  }
+
+  const submitData = (url, data) => {
+    fetch ('https://win22-webapi.azurewebsites.net/api/contactform', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: json     
+    })
+    .then(res => {
+
+      if (res.status === 200) {
+        return true
+      }
+      return false
+  }) 
   }
 
 
@@ -54,6 +95,13 @@ const ContactForm = () => {
           <div className="alert alert-success text-center mb-5" role="alert">
             <h3>Thank you for your comments</h3> 
             <p>We will contact you as soon as possible.</p>
+            </div>  ) : (<></>)
+        }
+        {
+        failedSubmit ? (
+          <div className="alert alert-danger text-center mb-5" role="alert">
+            <h3>Something went wrong!</h3> 
+            <p>We couldn't submit your comments - please try again later.</p>
             </div>  ) : (<></>)
         }
         
