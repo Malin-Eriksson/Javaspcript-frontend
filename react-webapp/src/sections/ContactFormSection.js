@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validate } from '../scripts/validation'
+import { submitData, validate } from '../scripts/validation'
 
 const ContactForm = () => {
   let currentPage = "Contact Us"
@@ -30,7 +30,7 @@ const ContactForm = () => {
     setErrors({...errors, [id]: validate(e)})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setFailedSubmit(false)
     setSubmitted(false)
@@ -44,50 +44,23 @@ const ContactForm = () => {
       setComments('')
       setErrors({})
 
-      fetch ('https://win22-webapi.azurewebsites.net/api/contactform', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: json     
-      })
-      .then(res => {
-
-        if (res.status === 200) {
-          setSubmitted(true)
-          setFailedSubmit(false)
-        }
-        else {
-          setSubmitted(false)
-          setFailedSubmit(true)
-        }
-    })
+      if (await submitData('https://win22-webapi.azurewebsites.net/api/contactform', 'POST', json, )) {
+        setSubmitted(true)
+        setFailedSubmit(false)
+      } else {
+        setSubmitted(false)
+        setFailedSubmit(true)
+      }
         
     } else {
       setSubmitted(false)
     }
   }
 
-  const submitData = (url, data) => {
-    fetch ('https://win22-webapi.azurewebsites.net/api/contactform', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: json     
-    })
-    .then(res => {
-
-      if (res.status === 200) {
-        return true
-      }
-      return false
-  }) 
-  }
 
 
   return (
-    <section className="contact-form mt-5">
+    <section className="contact-form">
       <div className="container">
         
         {
