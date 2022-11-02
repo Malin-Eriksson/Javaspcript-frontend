@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import bannerImgLeft from '../assets/images/banner-1.svg'
+import bannerImgLeft from '../assets/images/banner1.svg'
 import bannerImgRight from '../assets/images/banner-2.svg'
 
 const BannerSection = () => {
