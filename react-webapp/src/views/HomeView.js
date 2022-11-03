@@ -18,7 +18,7 @@ const HomeView = () => {
 
     return (
       <>
-        <MainMenuSection />
+        <section className='gradient-grey'><MainMenuSection /></section>
         <ShowcaseSection />
         <ProductGridSection title="Featured Products" items={productContext.featuredProducts}/>
         <BannerSection />
