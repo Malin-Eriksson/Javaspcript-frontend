@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
 const ProductDetailsView = () => {
-    const params = useParams()
+    const {id} = useParams()
+    const [product, setProduct] = useState ({})
+      
+useEffect(() => {
+  
+  const fetchData = async () => {
+    const result = await fetch ('api-url ${id}')
+    setProduct(await result.json)
+  }
+  fetchData ()
+
+}, [])
 
   return (
     <>
         <MainMenuSection />
         <div className='container mt-5'>
-            <h1>{params.name}</h1>
+            <div>{product.name}
+            <img src={product.image.Name}/>
+            </div>
         </div>
         <FooterSection />
     </>

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import { ProductContext } from '../contexts/contexts'
+import { Display1Context } from '../contexts/contexts'
 
-const ProductDisplaySection1 = ({title, items = []}) => {
+const ProductDisplaySection1 = ({title}) => {
 
-        const products = useContext(ProductContext)
+        const items = useContext(Display1Context)
 
     return (
         <section className="product-display-1 container">

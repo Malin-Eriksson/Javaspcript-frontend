@@ -3,16 +3,16 @@ import MainMenuSection from '../sections/MainMenuSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import FooterSection from '../sections/FooterSection'
-import { ProductContext } from '../contexts/contexts'
+import { ProductsContext } from '../contexts/contexts'
 
 const ProductsView = () => {
-  const productContext = useContext(ProductContext)
+  const products = useContext(ProductsContext)
 
   return (
     <>
       <MainMenuSection />
       <BreadcrumbSection currentPage="Products"/>
-      <ProductGridSection title="Products" items={productContext.allProducts} />
+      <ProductGridSection title="Products" items={products} />
       <FooterSection />
     </>
   )

@@ -7,12 +7,15 @@ import BannerSection from '../sections/BannerSection'
 import ProductDisplaySection1 from '../sections/ProductDisplaySection1'
 import ProductDisplaySection2 from '../sections/ProductDisplaySection2'
 import ShopInfoSection from '../sections/ShopInfoSection'
-import { ProductContext } from '../contexts/contexts'
+import { FeaturedContext, Display1Context, Display2Context } from '../contexts/contexts'
 
 
 
 const HomeView = () => {
-    const productContext = useContext(ProductContext)
+    const featured = useContext(FeaturedContext)
+    const display1 = useContext(Display1Context)
+    const display2 = useContext(Display2Context)
+
 
 
 
@@ -20,10 +23,10 @@ const HomeView = () => {
       <>
         <section className='gradient-grey'><MainMenuSection /></section>
         <ShowcaseSection />
-        <ProductGridSection title="Featured Products" items={productContext.featuredProducts}/>
+        <ProductGridSection title="Featured Products" items={featured}/>
         <BannerSection />
-        <ProductDisplaySection1 title="2 FOR USD $29" items={productContext.productDisplay1}/>
-        <ProductDisplaySection2 title="2 FOR USD $29" items={productContext.productDisplay2}/>
+        <ProductDisplaySection1 title="2 FOR USD $29" items={display1}/>
+        <ProductDisplaySection2 title="2 FOR USD $29" items={display2}/>
         <ShopInfoSection />
         <FooterSection />
       </>

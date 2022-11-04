@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./App.css"
+import "./style.min.css"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomeView from './views/HomeView'
@@ -11,53 +11,54 @@ import SearchView from './views/SearchView'
 import CompareView from './views/CompareView'
 import WishlistView from './views/WishlistView'
 import ShoppingCartView from './views/ShoppingCartView'
-import NotFoundView from './views/NotFoundView';
-import { ProductContext } from './contexts/contexts'
+import NotFoundView from './views/NotFoundView'
+import { ProductsContext, FeaturedContext, Display1Context, Display2Context } from './contexts/contexts'
 
 
 
 
 
 function App() {
-  const [products, setProducts] = useState({
-    allProducts: [],
-    featuredProducts: [],
-    productDisplay1: [],
-    productDisplay2: []
-  })
+  const [products, setProducts] = useState([])
+  const [featured, setFeatured] = useState([])
+  const [display1, setDisplay1] = useState ([])
+  const [display2, setDisplay2] = useState ([])
 
-
+ 
   useEffect(() => {
-    const fetchAllProducts = async () => {
+    const fetchProducts = async () => {
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-      setProducts({...products, allProducts: await result.json()})
+      setProducts(await result.json())
     }
-    fetchAllProducts()
+    fetchProducts()
 
     const fetchFeaturedProducts = async () => {
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
-      setProducts({...products, featuredProducts: await result.json()})
+      setFeatured(await result.json())
     }
     fetchFeaturedProducts()
 
-    const fetchProductDisplay1 = async () => {
+    const fetchDisplay1 = async () => {
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-      setProducts({...products, productDisplay1: await result.json()})
+      setDisplay1(await result.json())
     }
-    fetchProductDisplay1()
+    fetchDisplay1()
 
-    const fetchProductDisplay2 = async () => {
+    const fetchDisplay2 = async () => {
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-      setProducts({...products, productDisplay2: await result.json()})
+      setDisplay1(await result.json())
     }
-    fetchProductDisplay2()
+    fetchDisplay2()
 
-  }, [products, setProducts])
+  }, [setProducts, setFeatured, setDisplay1, setDisplay2])
 
 
   return (
     <BrowserRouter>
-      <ProductContext.Provider value={products}>
+      <ProductsContext.Provider value={products}>
+      <FeaturedContext.Provider value={featured}>
+      <Display1Context.Provider value={display1}>
+      <Display2Context.Provider value={display2}>
         <Routes>
           <Route path='/' element={<HomeView />}/>
           <Route path='/categories' element={<CategoriesView />}/>
@@ -70,9 +71,12 @@ function App() {
           <Route path='/shoppingcart' element={<ShoppingCartView />}/>
           <Route path='*' element={<NotFoundView />}/>
         </Routes>
-      </ProductContext.Provider>
+      </Display2Context.Provider>
+      </Display1Context.Provider>
+      </FeaturedContext.Provider>
+      </ProductsContext.Provider>
     </BrowserRouter>
   );
-}
+  }
 
 export default App
