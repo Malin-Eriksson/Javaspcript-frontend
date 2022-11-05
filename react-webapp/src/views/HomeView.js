@@ -26,7 +26,7 @@ const HomeView = () => {
         <ProductGridSection title="Featured Products" items={featured}/>
         <BannerSection />
         <ProductDisplaySection1 title="2 FOR USD $29" items={display1}/>
-        <ProductDisplaySection2 title="2 FOR USD $29" items={display2}/>
+        <ProductDisplaySection2 title="2 FOR USD $49" items={display2}/>     
         <ShopInfoSection />
         <FooterSection />
       </>

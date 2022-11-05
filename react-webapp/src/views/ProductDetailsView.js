@@ -10,7 +10,7 @@ const ProductDetailsView = () => {
 useEffect(() => {
   
   const fetchData = async () => {
-    const result = await fetch ('api-url ${id}')
+    const result = await fetch ('https://win22-webapi.azurewebsites.net/api/products/${id}')
     setProduct(await result.json)
   }
   fetchData ()
@@ -22,7 +22,7 @@ useEffect(() => {
         <MainMenuSection />
         <div className='container mt-5'>
             <div>{product.name}
-            <img src={product.image.Name}/>
+            <img src={product.imageName}/>
             </div>
         </div>
         <FooterSection />

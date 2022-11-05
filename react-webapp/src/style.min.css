@@ -312,15 +312,13 @@ header {
   width: 100%;
   margin-bottom: 60px;
 }
-.product-display-1 h1,
-.product-display-2 h1 {
-  color: #FFFFFF;
-  font-size: 45px;
-  font-weight: 700;
-}
 .product-display-1 .card-body,
 .product-display-2 .card-body {
   text-align: left !important;
+}
+.product-display-1 .product-grid,
+.product-display-2 .product-grid {
+  display: inline !important;
 }
 .product-display-1 .flash-box,
 .product-display-2 .flash-box {
@@ -331,6 +329,12 @@ header {
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+}
+.product-display-1 .flash-box h1,
+.product-display-2 .flash-box h1 {
+  color: #FFFFFF;
+  font-size: 45px;
+  font-weight: 700;
 }
 .product-display-1 .flash-box .btn-theme,
 .product-display-2 .flash-box .btn-theme {

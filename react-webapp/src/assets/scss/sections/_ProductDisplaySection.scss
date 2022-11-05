@@ -1,17 +1,18 @@
+
+
 .product-display-1,
 .product-display-2 {
     display: flex;
     width: 100%;    
     margin-bottom: 60px;
 
-    h1 {
-        color: $color-white;
-        font-size: $font-size-45;
-        font-weight: $font-weight-bold;
-    }
-
     .card-body {
         text-align: left !important;
+        
+    }
+
+    .product-grid {
+        display: inline !important;
     }
 
     .flash-box {
@@ -22,6 +23,12 @@
         justify-content: center;
         align-items: center;
         margin-right: 30px;
+
+        h1 {
+            color: $color-white;
+            font-size: $font-size-45;
+            font-weight: $font-weight-bold;
+        }
 
         .btn-theme {
             background-color: $color-white;
