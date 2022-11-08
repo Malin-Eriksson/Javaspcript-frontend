@@ -40,6 +40,7 @@
                 box-shadow: 0 0 10px 5px $color-shadow;
                 position: relative;
                 transition: all 0.3s ease-in-out;
+                border: none;
     
                 &:hover {
                     background-color: $color-black;

@@ -13,6 +13,7 @@ import WishlistView from './views/WishlistView'
 import ShoppingCartView from './views/ShoppingCartView'
 import NotFoundView from './views/NotFoundView'
 import { AllProductsContext, FeaturedContext, Display1Context, Display2Context } from './contexts/contexts'
+import { ShoppingCartProvider } from './contexts/ShoppingCartContext'
 
 
 
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ShoppingCartProvider>
       <AllProductsContext.Provider value={allProducts}>
       <FeaturedContext.Provider value={featured}>
       <Display1Context.Provider value={display1}>
@@ -63,7 +65,7 @@ function App() {
           <Route path='/' element={<HomeView />}/>
           <Route path='/categories' element={<CategoriesView />}/>
           <Route path='/products' element={<ProductsView />}/>
-          <Route path='/products/:articleNumber' element={<ProductDetailsView />}/>
+          <Route path='/products/:id' element={<ProductDetailsView />}/>
           <Route path='/contact' element={<ContactView />}/>
           <Route path='/search' element={<SearchView />}/>
           <Route path='/compare' element={<CompareView />}/>
@@ -75,6 +77,7 @@ function App() {
       </Display1Context.Provider>
       </FeaturedContext.Provider>
       </AllProductsContext.Provider>
+      </ShoppingCartProvider>
     </BrowserRouter>
   );
   }
