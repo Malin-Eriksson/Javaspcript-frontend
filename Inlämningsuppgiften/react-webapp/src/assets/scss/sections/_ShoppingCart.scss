@@ -1,0 +1,9 @@
+.shoppingcart {
+    width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+    .shoppingcart {
+        width: 500px !important;
+    }
+}
