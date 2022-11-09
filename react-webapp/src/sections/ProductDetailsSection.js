@@ -1,13 +1,16 @@
 import React from 'react'
 
-const ProductDetailsSection = ({products}) => {
+
+const ProductDetailsSection = ({item}) => {
   return (
-    <div className='container mt-5'>
+    <section className='product-details'>
+      <div className='container'>
         <div>
-            <h1>{products.name}</h1>
-            <img src={products.imageName} alt={products.name}/>
+          <div>{item.name}</div>
+          <img src={item.imageName} />
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
 

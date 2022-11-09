@@ -1,18 +1,18 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import { Display2Context } from '../contexts/contexts'
+import { useProductContext } from '../contexts/ProductContext'
 
 const ProductDisplaySection2 = ({title}) => {
 
-    const items = useContext(Display2Context)
+    const {productDisplay2} = useProductContext()
 
     return (
         <section className="product-display-2 container">
             <div className="product-grid">
                 <div className="row row-cols-1 row-cols-md-2 ">
                     {
-                    items.map(product => <ProductCard key={product.articleNumber} item={product} />)
+                    productDisplay2.map(product => <ProductCard key={product.articleNumber} item={product} />)
                     }
                 </div>
             </div>

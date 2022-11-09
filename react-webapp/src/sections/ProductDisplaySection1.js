@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import { Display1Context } from '../contexts/contexts'
+import { useProductContext } from '../contexts/ProductContext'
 
 const ProductDisplaySection1 = ({title}) => {
 
-        const items = useContext(Display1Context)
+        const {productDisplay1} = useProductContext()
 
     return (
         <section className="product-display-1 container">
@@ -20,7 +20,7 @@ const ProductDisplaySection1 = ({title}) => {
             <div className="product-grid">
                 <div className="row row-cols-1 row-cols-md-2 ">
                     {
-                    items.map(product => <ProductCard key={product.articleNumber} item={product} />)
+                    productDisplay1.map(product => <ProductCard key={product.articleNumber} item={product} />)
                     }
                 </div>
             </div>

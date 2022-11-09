@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useEffect } from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
@@ -7,26 +7,34 @@ import BannerSection from '../sections/BannerSection'
 import ProductDisplaySection1 from '../sections/ProductDisplaySection1'
 import ProductDisplaySection2 from '../sections/ProductDisplaySection2'
 import ShopInfoSection from '../sections/ShopInfoSection'
-import { FeaturedContext, Display1Context, Display2Context } from '../contexts/contexts'
+import { useProductContext } from '../contexts/ProductContext'
 
 
 
 const HomeView = () => {
-    const featured = useContext(FeaturedContext)
-    const display1 = useContext(Display1Context)
-    const display2 = useContext(Display2Context)
+  const {featuredProducts, getFeaturedProducts, productDisplay1, productDisplay2, getProductDisplay1, getProductDisplay2} = useProductContext()
 
+  useEffect(() => {
+    getFeaturedProducts(8)
+  }, [])
 
+  useEffect(() => {
+    getProductDisplay1(4)
+  }, [])
+
+  useEffect(() => {
+    getProductDisplay2(4)
+  }, [])
 
 
     return (
       <>
         <section className='gradient-grey'><MainMenuSection /></section>
         <ShowcaseSection />
-        <ProductGridSection title="Featured Products" items={featured}/>
+        <ProductGridSection title="Featured Products" items={featuredProducts}/>
         <BannerSection />
-        <ProductDisplaySection1 title="2 FOR USD $29" items={display1}/>
-        <ProductDisplaySection2 title="2 FOR USD $49" items={display2}/>     
+        <ProductDisplaySection1 title="2 FOR USD $29" items={productDisplay1}/>
+        <ProductDisplaySection2 title="2 FOR USD $49" items={productDisplay2}/>     
         <ShopInfoSection />
         <FooterSection />
       </>
