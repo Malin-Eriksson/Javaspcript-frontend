@@ -423,6 +423,56 @@ footer .socialmedia a {
 .shoppingcart {
   width: 100% !important;
 }
+.shoppingcart .shoppingcart-item {
+  margin: 30px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.shoppingcart .shoppingcart-item .item-image {
+  height: 65px;
+  width: 65px;
+  margin-right: 20px;
+  background-color: #BBBBBB;
+}
+.shoppingcart .shoppingcart-item .item-image img {
+  height: 65px;
+  width: 65px;
+}
+.shoppingcart .item-info {
+  flex: 3;
+  font-size: 16px;
+}
+.shoppingcart .item-info .item-info-name {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.shoppingcart .item-info .item-info-quantity {
+  background-color: #F5F5F5;
+  display: inline-block;
+  border-radius: 5px;
+}
+.shoppingcart .item-info .item-info-quantity span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.shoppingcart .item-info .item-info-quantity .btn-decrement {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #E6E6E6;
+}
+.shoppingcart .item-info .item-info-quantity .btn-increment {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #E6E6E6;
+}
+.shoppingcart .item-price {
+  text-align: right;
+}
+.shoppingcart .item-price button {
+  border: none;
+  background-color: white;
+}
 
 @media (min-width: 1200px) {
   .shoppingcart {

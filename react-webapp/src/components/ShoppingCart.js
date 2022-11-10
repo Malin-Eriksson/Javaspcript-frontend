@@ -13,7 +13,7 @@ const ShoppingCart = () => {
         </div>
         <div className="offcanvas-body">
             {
-                cartItems.map(item => (<ShoppingCartItem key={item.artibleNumber} item={item} />))
+                cartItems.map(item => (<ShoppingCartItem key={item.articleNumber} item={item} />))
             }            
         </div>
     </div>
