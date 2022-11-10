@@ -1,13 +1,16 @@
 import React from 'react'
+import { useProductContext } from '../contexts/ProductContext'
 
 
-const ProductDetailsSection = ({item}) => {
+const ProductDetailsSection = () => {
+  const {products} = useProductContext()
+
   return (
     <section className='product-details'>
       <div className='container'>
         <div>
-          <div>{item.name}</div>
-          <img src={item.imageName} />
+          <div>{products.name}</div>
+          <img src={products.imageName} />
         </div>
       </div>
     </section>
@@ -16,3 +19,4 @@ const ProductDetailsSection = ({item}) => {
 
 
 export default ProductDetailsSection
+

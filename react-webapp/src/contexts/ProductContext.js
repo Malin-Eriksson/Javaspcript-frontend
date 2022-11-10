@@ -19,24 +19,24 @@ export const ProductProvider = ({children}) => {
         setProducts(await res.json())
     }
 
-    const getFeaturedProducts = async (take=0) => {
+    const getFeaturedProducts = async (take=8) => {
         const res = await fetch(url + `?take=${take}`)
-        setFeaturedProducts(await res.json)
+        setFeaturedProducts(await res.json())
     }
 
-    const getProductDisplay1 = async (take=0) => {
+    const getProductDisplay1 = async (take=4) => {
         const res = await fetch(url + `?take=${take}`)
-        setProductDisplay1(await res.json)
+        setProductDisplay1(await res.json())
     }
 
-    const getProductDisplay2 = async (take=0) => {
-        const res = await fetch(url + `?take=${take}`)
-        setProductDisplay2(await res.json)
+    const getProductDisplay2 = async (take=4) => {
+        const res = await fetch(url + `/?take=${take}`)
+        setProductDisplay2(await res.json())
     }
 
     const getProduct = async (articleNumber) => {
         const res = await fetch(url + `/${articleNumber}`)
-        setProduct(await res.json)
+        setProduct(await res.json())
     }
 
     return <ProductContex.Provider value={{product, products, featuredProducts, productDisplay1, productDisplay2, getProducts, getFeaturedProducts, getProductDisplay1, getProductDisplay2, getProduct}}>

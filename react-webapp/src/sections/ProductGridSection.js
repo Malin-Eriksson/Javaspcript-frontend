@@ -4,7 +4,7 @@ import { useProductContext } from '../contexts/ProductContext'
 
 const ProductGridSection = ({title}) => {
 
-  const {products} = useProductContext()
+  const {featuredProducts} = useProductContext()
   
   return (
     <section className="product-grid container">
@@ -12,7 +12,7 @@ const ProductGridSection = ({title}) => {
       <h1>{title}</h1>
         <div className="row row-cols-1 row-cols-md-4 g-4">
           {
-          products.map(product => <ProductCard key={product.articleNumber} item={product} />)
+          featuredProducts.map(product => <ProductCard key={product.articleNumber} item={product} />)
           }
         </div>
       </div>

@@ -7,11 +7,11 @@ import ProductDetailsSection from '../sections/ProductDetailsSection'
 import { useProductContext } from '../contexts/ProductContext'
 
 const ProductDetailsView = () => {
-    const {id} = useParams()
-    const [product, getProduct] = useProductContext ({})
+    const {articleNumber} = useParams()
+    const {product, getProduct} = useProductContext ()
       
 useEffect(() => {
-  getProduct(id)
+  getProduct(articleNumber)
 
 }, [])
 
@@ -19,11 +19,13 @@ useEffect(() => {
     <>
         <MainMenuSection />
         <BreadcrumbSection parentPage="Products" currentPage={product.name}/>
-        <ProductDetailsSection item={product}/>
+        <ProductDetailsSection products={product}/>
         <FooterSection />
     </>
   )
 }
 
 export default ProductDetailsView
+
+
 
