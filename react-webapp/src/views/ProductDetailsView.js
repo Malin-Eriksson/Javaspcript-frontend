@@ -7,11 +7,11 @@ import ProductDetailsSection from '../sections/ProductDetailsSection'
 import { useProductContext } from '../contexts/ProductContext'
 
 const ProductDetailsView = () => {
-    const {articleNumber} = useParams()
-    const {product, getProduct} = useProductContext ()
+    const {id} = useParams()
+    const {product, getProduct} = useProductContext()
       
 useEffect(() => {
-  getProduct(articleNumber)
+  getProduct(id)
 
 }, [])
 

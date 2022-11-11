@@ -2,8 +2,8 @@ import React from 'react'
 import { useProductContext } from '../contexts/ProductContext'
 
 
-const ProductDetailsSection = () => {
-  const {products} = useProductContext()
+const ProductDetailsSection = ({products}) => {
+
 
   return (
     <section className='product-details'>

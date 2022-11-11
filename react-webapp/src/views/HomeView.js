@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
-import ProductGridSection from '../sections/ProductGridSection'
 import ShowcaseSection from '../sections/ShowcaseSection'
 import BannerSection from '../sections/BannerSection'
 import ProductDisplaySection1 from '../sections/ProductDisplaySection1'
