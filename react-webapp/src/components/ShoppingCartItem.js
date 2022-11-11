@@ -3,7 +3,7 @@ import { useShoppingCart } from '../contexts/ShoppingCartContext'
 import { currencyFormatter } from './utilities/currencyFormatter'
 
 const ShoppingCartItem = ({item}) => {
-    const {decrementQuantity, incrementQuantity, removeItem } = useShoppingCart()
+    const { decrementQuantity, incrementQuantity, removeItem } = useShoppingCart()
 
     return (
         <div className='shoppingcart-item'>

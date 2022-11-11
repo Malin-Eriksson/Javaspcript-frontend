@@ -29,7 +29,7 @@ export const ShoppingCartProvider = ({children}) => {
             } else {
                 return items.map(item => {
                     if (item.articleNumber === articleNumber) {
-                        return {...items, quantity: item.quantity + 1 }
+                        return {...item, quantity: item.quantity + 1 }
                     } else {
                         return item
                     }
@@ -47,7 +47,7 @@ export const ShoppingCartProvider = ({children}) => {
             } else {
                 return items.map(item => {
                     if (item.articleNumber === articleNumber) {
-                        return {...items, quantity: item.quantity - 1 }
+                        return {...item, quantity: item.quantity - 1 }
                     } else {
                         return item
                     }
